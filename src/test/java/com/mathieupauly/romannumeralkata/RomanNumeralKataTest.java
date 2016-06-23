@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class RomanNumeralKataTest {
+
     @Test
     public void zero() {
         assertEquals("", toRoman(0));
@@ -26,15 +27,12 @@ public class RomanNumeralKataTest {
     }
 
     private String toRoman(int arabic) {
-        if (1 + 1 + 1 == arabic) {
-            return "I" + "I" + "I";
+        String roman = "";
+
+        for (int n = 0; n < arabic; n++) {
+            roman += "I";
         }
-        if (1 + 1 == arabic) {
-            return "I" + "I";
-        }
-        if (1 == arabic) {
-            return "I";
-        }
-        return "";
+
+        return roman;
     }
 }
