@@ -22,10 +22,10 @@ public class RomanNumeralKataTest {
 
     private String toRoman(int arabic) {
         if (3 == arabic) {
-            return "III";
+            return "I" + "I" + "I";
         }
         if (2 == arabic) {
-            return "II";
+            return "I" + "I";
         }
         return "I";
     }
