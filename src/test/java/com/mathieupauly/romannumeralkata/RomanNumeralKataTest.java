@@ -11,6 +11,6 @@ public class RomanNumeralKataTest {
     }
 
     private String toRoman(int arabic) {
-        return null;
+        return "I";
     }
 }
