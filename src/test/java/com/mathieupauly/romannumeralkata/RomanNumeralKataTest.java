@@ -15,6 +15,11 @@ public class RomanNumeralKataTest {
         assertEquals("II", toRoman(2));
     }
 
+    @Test
+    public void three() {
+        assertEquals("III", toRoman(3));
+    }
+
     private String toRoman(int arabic) {
         if (2 == arabic) {
             return "II";
