@@ -27,6 +27,9 @@ public class RomanNumeralKataTest {
         if (1 + 1 == arabic) {
             return "I" + "I";
         }
-        return "I";
+        if (1 == arabic) {
+            return "I";
+        }
+        return null;
     }
 }
