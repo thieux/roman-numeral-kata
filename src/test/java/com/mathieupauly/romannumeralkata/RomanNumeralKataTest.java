@@ -1,29 +1,38 @@
 package com.mathieupauly.romannumeralkata;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
+import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(Parameterized.class)
 public class RomanNumeralKataTest {
 
-    @Test
-    public void zero() {
-        assertEquals("", toRoman(0));
+    @Parameterized.Parameters(name = "{0} -> \"{1}\"")
+    public static Collection<Object[]> cases() {
+        return Arrays.asList(new Object[][] {
+                {0, ""},
+                {1, "I"},
+                {2, "II"},
+                {3, "III"},
+        });
+    }
+
+    private final int arabic;
+    private final String expected;
+
+    public RomanNumeralKataTest(int arabic, String expected) {
+        this.arabic = arabic;
+        this.expected = expected;
     }
 
     @Test
-    public void one() {
-        assertEquals("I", toRoman(1));
-    }
-
-    @Test
-    public void two() {
-        assertEquals("II", toRoman(2));
-    }
-
-    @Test
-    public void three() {
-        assertEquals("III", toRoman(3));
+    public void testToRoman() {
+        assertEquals(expected, toRoman(arabic));
     }
 
     private String toRoman(int arabic) {
