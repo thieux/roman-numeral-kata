@@ -6,6 +6,11 @@ import static org.junit.Assert.assertEquals;
 
 public class RomanNumeralKataTest {
     @Test
+    public void zero() {
+        assertEquals("", toRoman(0));
+    }
+
+    @Test
     public void one() {
         assertEquals("I", toRoman(1));
     }
