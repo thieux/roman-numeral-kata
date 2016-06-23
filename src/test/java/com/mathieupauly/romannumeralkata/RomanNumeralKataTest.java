@@ -35,6 +35,6 @@ public class RomanNumeralKataTest {
         if (1 == arabic) {
             return "I";
         }
-        return null;
+        return "";
     }
 }
