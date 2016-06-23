@@ -19,6 +19,7 @@ public class RomanNumeralKataTest {
                 {1, "I"},
                 {2, "II"},
                 {3, "III"},
+                {5, "V"},
         });
     }
 
