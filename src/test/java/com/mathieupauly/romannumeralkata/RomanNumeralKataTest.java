@@ -38,6 +38,10 @@ public class RomanNumeralKataTest {
     }
 
     private String toRoman(int arabic) {
+        if (6 == arabic) {
+            return "VI";
+        }
+
         if (5 == arabic) {
             return "V";
         }
