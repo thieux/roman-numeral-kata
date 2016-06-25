@@ -37,6 +37,8 @@ public class RomanNumeralKataTest {
     }
 
     private String toRoman(int arabic) {
+        if (5 == arabic) return "V";
+
         String roman = "";
 
         for (int n = 0; n < arabic; n++) {
