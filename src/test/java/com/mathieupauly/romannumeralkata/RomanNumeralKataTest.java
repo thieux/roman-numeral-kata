@@ -14,7 +14,7 @@ public class RomanNumeralKataTest {
 
     @Parameterized.Parameters(name = "{0} -> \"{1}\"")
     public static Collection<Object[]> cases() {
-        return Arrays.asList(new Object[][] {
+        return Arrays.asList(new Object[][]{
                 {0, ""},
                 {1, "I"},
                 {2, "II"},
@@ -40,15 +40,15 @@ public class RomanNumeralKataTest {
 
     private String toRoman(int arabic) {
         if (arabic >= 5 + 2) {
-            return "V" + toRoman(2);
+            return "V" + toRoman(arabic - 5);
         }
 
         if (arabic >= 5 + 1) {
-            return "V" + toRoman(1);
+            return "V" + toRoman(arabic - 5);
         }
 
         if (arabic >= 5 + 0) {
-            return "V" + toRoman(0);
+            return "V" + toRoman(arabic - 5);
         }
 
         String roman = "";
