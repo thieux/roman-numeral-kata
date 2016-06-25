@@ -55,12 +55,10 @@ public class RomanNumeralKataTest {
             return "V" + toRoman(arabic - 5);
         }
 
-        String roman = "";
-
-        for (int n = 0; n < arabic; n++) {
-            roman += "I";
+        if (arabic >= 1) {
+            return "I" + toRoman(arabic - 1);
         }
 
-        return roman;
+        return "";
     }
 }
