@@ -42,15 +42,7 @@ public class RomanNumeralKataTest {
     }
 
     private String toRoman(int arabic) {
-        if (arabic == 10 + 2) {
-            return "X" + toRoman(arabic - 10);
-        }
-
-        if (arabic == 10 + 1) {
-            return "X" + toRoman(arabic - 10);
-        }
-
-        if (arabic == 10) {
+        if (arabic >= 10) {
             return "X" + toRoman(arabic - 10);
         }
 
