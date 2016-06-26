@@ -6,6 +6,8 @@ import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
@@ -43,20 +45,26 @@ public class RomanNumeralKataTest {
     }
 
     private String toRoman(int arabic) {
+        Map<Integer, String> bases = new HashMap<>();
+        bases.put(1, "I");
+        bases.put(5, "V");
+        bases.put(10, "X");
+        bases.put(50, "L");
+
         if (arabic >= 50) {
-            return "L" + toRoman(arabic - 50);
+            return bases.get(50) + toRoman(arabic - 50);
         }
 
         if (arabic >= 10) {
-            return "X" + toRoman(arabic - 10);
+            return bases.get(10) + toRoman(arabic - 10);
         }
 
         if (arabic >= 5) {
-            return "V" + toRoman(arabic - 5);
+            return bases.get(5) + toRoman(arabic - 5);
         }
 
         if (arabic >= 1) {
-            return "I" + toRoman(arabic - 1);
+            return bases.get(1) + toRoman(arabic - 1);
         }
 
         return "";
