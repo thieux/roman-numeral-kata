@@ -6,6 +6,7 @@ import org.junit.runners.Parameterized;
 
 import java.util.*;
 
+import static java.util.Comparator.*;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
@@ -42,7 +43,7 @@ public class RomanNumeralKataTest {
     }
 
     private String toRoman(int arabic) {
-        Map<Integer, String> bases = new TreeMap<>(Comparator.reverseOrder());
+        Map<Integer, String> bases = new TreeMap<>(reverseOrder());
         bases.put(1, "I");
         bases.put(5, "V");
         bases.put(10, "X");
